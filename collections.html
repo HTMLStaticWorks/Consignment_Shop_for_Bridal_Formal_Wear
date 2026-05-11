@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections | LUXE BRIDAL</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-theme="light">
+
+    <!-- Header (Same as Index) -->
+    <nav class="navbar-luxury">
+        <div class="container-custom d-flex justify-content-between align-items-center">
+            <a href="index.html" class="brand-logo">
+                <img src="images/logo.png" alt="Luxe Bridal Logo" class="logo-img me-2">
+                Luxe Bridal
+            </a>
+
+            <div class="nav-links-desktop d-none d-lg-block">
+                <a href="index.html" class="nav-link-custom">Home</a>
+                <a href="home2.html" class="nav-link-custom">Home 2</a>
+                <a href="collections.html" class="nav-link-custom active">Collections</a>
+                <a href="consignment.html" class="nav-link-custom">Consignment</a>
+                <a href="about.html" class="nav-link-custom">About</a>
+                <a href="contact.html" class="nav-link-custom">Contact</a>
+            </div>
+
+            <div class="header-actions d-flex align-items-center">
+                <button id="theme-toggle" class="btn border-0 p-2 me-2" aria-label="Toggle Theme">
+                    <i class="bi bi-moon"></i>
+                </button>
+                <button id="rtl-toggle" class="btn border-0 p-2 me-2" aria-label="Toggle RTL">
+                    <i class="bi bi-text-paragraph"></i>
+                </button>
+                <a href="login.html" class="nav-link-custom d-none d-md-block me-3"><i class="bi bi-person"></i></a>
+                <a href="#" class="nav-link-custom me-3"><i class="bi bi-heart"></i></a>
+                <button id="hamburger-menu" class="btn border-0 p-0 d-lg-none" aria-label="Open Menu">
+                    <i class="bi bi-list fs-3"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar Menu (Mobile & Expanded) -->
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
+    <div id="sidebar-menu" class="sidebar-menu">
+        <div id="sidebar-close" class="sidebar-close"><i class="bi bi-x-lg"></i></div>
+        <nav class="d-flex flex-column gap-4">
+            <a href="index.html" class="fs-4 luxury-heading">Home</a>
+            <a href="home2.html" class="fs-4 luxury-heading">Home 2</a>
+            <a href="collections.html" class="fs-4 luxury-heading">Collections</a>
+            <a href="consignment.html" class="fs-4 luxury-heading">Consignment</a>
+            <a href="about.html" class="fs-4 luxury-heading">Our Story</a>
+            <a href="contact.html" class="fs-4 luxury-heading">Contact</a>
+            <hr class="my-3 opacity-25">
+            <a href="login.html" class="fs-5">Login / Sign Up</a>
+        </nav>
+        <div class="mt-auto">
+            <p class="small opacity-50 mb-3">Luxe Bridal Consignment</p>
+            <div class="d-flex gap-3">
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-pinterest"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Header (Unified Hero) -->
+    <header class="hero hero-small mb-5" style="background-image: url('images/hero_bridal.png');">
+        <div class="hero-overlay"></div>
+        <div class="hero-content container py-5 text-center">
+            <span class="text-white text-uppercase letter-spacing-2 mb-3 d-block">Curated Designer</span>
+            <h1 class="text-white display-3 luxury-heading">Our Collections</h1>
+            <p class="text-white-50 mx-auto mb-0" style="max-width: 600px;">Experience the finest selection of pre-loved
+                couture from global ateliers.</p>
+        </div>
+    </header>
+
+    <!-- Collection Main Section -->
+    <section class="pb-5">
+        <div class="container-custom">
+            <!-- Mobile Category Filter (Visible on Mobile/Tablet only) -->
+            <div class="d-lg-none mb-5">
+                <div class="d-flex overflow-x-auto pb-2 gap-2 no-scrollbar"
+                    style="scrollbar-width: none; -ms-overflow-style: none;">
+                    <button class="filter-btn active text-nowrap px-4">All Items</button>
+                    <button class="filter-btn text-nowrap px-4">Bridal Gowns</button>
+                    <button class="filter-btn text-nowrap px-4">Formal Wear</button>
+                    <button class="filter-btn text-nowrap px-4">Accents</button>
+                </div>
+            </div>
+
+            <div class="row g-5">
+                <!-- Filters Sidebar -->
+                <div class="col-lg-3 d-none d-lg-block">
+                    <div class="filter-sidebar">
+                        <div class="filter-group">
+                            <span class="filter-title">Category</span>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="catBridal" checked>
+                                <label class="form-check-label small" for="catBridal">Bridal Gowns</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="catFormal">
+                                <label class="form-check-label small" for="catFormal">Formal & Evening</label>
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <span class="filter-title">Designer</span>
+                            <select class="form-select form-control-luxury">
+                                <option selected>All Designers</option>
+                                <option>Vera Wang</option>
+                                <option>Pronovias</option>
+                                <option>Monique Lhuillier</option>
+                                <option>Galia Lahav</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <span class="filter-title">Size</span>
+                            <div class="d-flex flex-wrap gap-2">
+                                <button class="btn btn-outline border-1 py-1 px-3 fs-6">0</button>
+                                <button class="btn btn-outline border-1 py-1 px-3 fs-6">2</button>
+                                <button class="btn btn-outline border-1 py-1 px-3 fs-6">4</button>
+                                <button class="btn btn-outline border-1 py-1 px-3 fs-6">6</button>
+                                <button class="btn btn-outline border-1 py-1 px-3 fs-6">8</button>
+                                <button class="btn btn-outline border-1 py-1 px-3 fs-6">10</button>
+                            </div>
+                        </div>
+
+                        <button class="btn-gold w-100 mt-4 py-3">Apply Filters</button>
+                    </div>
+                </div>
+
+                <!-- Product Grid -->
+                <div class="col-lg-9">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <span class="small text-muted">Showing 12 results</span>
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle small text-muted" type="button"
+                                data-bs-toggle="dropdown">
+                                Sort By: Recommended
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item small" href="#">Price: Low to High</a></li>
+                                <li><a class="dropdown-item small" href="#">Price: High to Low</a></li>
+                                <li><a class="dropdown-item small" href="#">Newest Arrivals</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="row g-4">
+                        <!-- Product Item 1 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="product-card">
+                                <div class="position-relative">
+                                    <img src="images/dress_1.png" alt="Designer Gown">
+                                    <button
+                                        class="wishlist-btn position-absolute top-0 end-0 m-3 btn bg-white shadow-sm rounded-circle p-2"
+                                        style="width:35px; height:35px; display:flex; align-items:center; justify-content:center;">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                    <span
+                                        class="position-absolute bottom-0 start-0 m-3 badge bg-white text-dark py-2 px-3 fw-light fs-6">New
+                                        Arrival</span>
+                                </div>
+                                <div class="product-info">
+                                    <p class="small text-gold text-uppercase mb-1">Vera Wang</p>
+                                    <h5 class="mb-2">Grace Ivory Tulle Gown</h5>
+                                    <p class="mb-0 fs-5">$1,200 <span
+                                            class="text-muted text-decoration-line-through small ms-2">$3,500</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Item 2 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="product-card">
+                                <div class="position-relative">
+                                    <img src="images/dress_2.png" alt="Designer Gown">
+                                    <button
+                                        class="wishlist-btn position-absolute top-0 end-0 m-3 btn bg-white shadow-sm rounded-circle p-2"
+                                        style="width:35px; height:35px; display:flex; align-items:center; justify-content:center;">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="product-info">
+                                    <p class="small text-gold text-uppercase mb-1">Pronovias</p>
+                                    <h5 class="mb-2">Lace Mermaid Gown</h5>
+                                    <p class="mb-0 fs-5">$1,850 <span
+                                            class="text-muted text-decoration-line-through small ms-2">$4,200</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Item 3 (Fallback Image) -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="product-card">
+                                <div class="position-relative">
+                                    <img src="images/collection_bridal.png" alt="Designer Gown">
+                                    <button
+                                        class="wishlist-btn position-absolute top-0 end-0 m-3 btn bg-white shadow-sm rounded-circle p-2"
+                                        style="width:35px; height:35px; display:flex; align-items:center; justify-content:center;">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="product-info">
+                                    <p class="small text-gold text-uppercase mb-1">Monique Lhuillier</p>
+                                    <h5 class="mb-2">Floral Appliqué A-Line</h5>
+                                    <p class="mb-0 fs-5">$2,100 <span
+                                            class="text-muted text-decoration-line-through small ms-2">$5,800</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Item 4 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="product-card">
+                                <div class="position-relative">
+                                    <img src="images/collection_formal.png" alt="Designer Gown">
+                                    <button
+                                        class="wishlist-btn position-absolute top-0 end-0 m-3 btn bg-white shadow-sm rounded-circle p-2"
+                                        style="width:35px; height:35px; display:flex; align-items:center; justify-content:center;">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="product-info">
+                                    <p class="small text-gold text-uppercase mb-1">Emerald Couture</p>
+                                    <h5 class="mb-2">Silk Evening Gown</h5>
+                                    <p class="mb-0 fs-5">$850 <span
+                                            class="text-muted text-decoration-line-through small ms-2">$1,500</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <nav class="mt-5">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled"><a class="page-link border-0" href="#">Prev</a></li>
+                            <li class="page-item active"><a class="page-link border-0 bg-gold text-white" href="#">1</a>
+                            </li>
+                            <li class="page-item"><a class="page-link border-0" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link border-0" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link border-0" href="#">Next</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Section 1: Authentication & Quality -->
+    <section class="py-5 bg-ivory">
+        <div class="container-custom py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <img src="images/consignment_process.png" alt="Curation" class="img-fluid luxury-shadow">
+                </div>
+                <div class="col-lg-6">
+                    <span class="text-gold text-uppercase letter-spacing-2 small mb-3 d-block">Guaranteed
+                        Excellence</span>
+                    <h2 class="display-5 luxury-heading mb-4">Our Curation Standards</h2>
+                    <p class="mb-4">Every gown in our collection undergoes a rigorous 5-point inspection process by our
+                        in-house couture experts. We verify authenticity, silhouette integrity, and fabric quality to
+                        ensure your designer piece is nothing short of perfect.</p>
+                    <ul class="list-unstyled d-flex flex-column gap-3 mb-5">
+                        <li class="d-flex align-items-center"><i class="bi bi-check2-circle text-gold me-2"></i>
+                            Designer Authentication</li>
+                        <li class="d-flex align-items-center"><i class="bi bi-check2-circle text-gold me-2"></i>
+                            Professional Steam & Prep</li>
+                        <li class="d-flex align-items-center"><i class="bi bi-check2-circle text-gold me-2"></i>
+                            Structural Integrity Check</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Section 2: The Signature Vault -->
+    <section class="py-5">
+        <div class="container-custom py-5">
+            <div class="text-center mb-5">
+                <h2 class="display-5 luxury-heading">The Signature Vault</h2>
+                <p class="text-muted">A rotating selection of our most rare, archival finds.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="position-relative overflow-hidden luxury-shadow" style="height: 500px;">
+                        <img src="images/hero_bridal.png" alt="Rare Find"
+                            class="w-100 h-100 object-fit-cover shadow-sm">
+                        <div class="position-absolute bottom-0 start-0 w-100 p-4"
+                            style="background: linear-gradient(transparent, rgba(0,0,0,0.85));">
+                            <h4 class="text-white luxury-heading h5 mb-1">Archival Vera Wang</h4>
+                            <p class="text-gold small mb-0">Spring 2022 Runway Piece</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="position-relative overflow-hidden luxury-shadow" style="height: 500px;">
+                        <img src="images/collection_bridal.png" alt="Rare Find"
+                            class="w-100 h-100 object-fit-cover shadow-sm">
+                        <div class="position-absolute bottom-0 start-0 w-100 p-4"
+                            style="background: linear-gradient(transparent, rgba(0,0,0,0.85));">
+                            <h4 class="text-white luxury-heading h5 mb-1">Inbal Dror Masterpiece</h4>
+                            <p class="text-gold small mb-0">Limited Edition Custom</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Section 3: Designer Showcase -->
+    <section class="py-5 bg-ivory">
+        <div class="container-custom py-5 text-center">
+            <h2 class="display-6 luxury-heading mb-5">Renowned Designers in Residence</h2>
+            <div class="d-flex flex-wrap justify-content-center gap-5 opacity-75">
+                <span class="fs-4 luxury-heading">VERA WANG</span>
+                <span class="fs-4 luxury-heading">PRONOVIAS</span>
+                <span class="fs-4 luxury-heading">GALIA LAHAV</span>
+                <span class="fs-4 luxury-heading">MONIQUE LHUILLIER</span>
+                <span class="fs-4 luxury-heading">ELIE SAAB</span>
+            </div>
+            <p class="mt-5 text-muted mx-auto" style="max-width: 700px;">We specialize in sourcing the most coveted
+                names in global bridal fashion, bringing world-class craftsmanship to your personal collection.</p>
+        </div>
+    </section>
+
+    <!-- Footer (Same as Index) -->
+    <footer>
+        <div class="container-custom">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a href="index.html" class="brand-logo mb-4">
+                        <img src="images/logo.png" alt="Luxe Bridal Logo" class="logo-img me-2">
+                        Luxe Bridal
+                    </a>
+                    <p class="text-muted pe-lg-5">A premium consignment boutique offering the finest bridal and formal
+                        wear. Experience couture elegance at an accessible price point.</p>
+                    <div class="d-flex mt-4">
+                        <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <h5 class="luxury-heading mb-4">Collections</h5>
+                    <a href="collections.html" class="footer-link">Bridal Gowns</a>
+                    <a href="collections.html" class="footer-link">Evening Gowns</a>
+                    <a href="collections.html" class="footer-link">Prom Dresses</a>
+                    <a href="collections.html" class="footer-link">New Arrivals</a>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <h5 class="luxury-heading mb-4">Quick Links</h5>
+                    <a href="consignment.html" class="footer-link">Consign with Us</a>
+                    <a href="about.html" class="footer-link">Our Story</a>
+                    <a href="contact.html" class="footer-link">Location</a>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <h5 class="luxury-heading mb-4">Newsletter</h5>
+                    <p class="small text-muted mb-4">Subscribe to receive updates on new designer arrivals.</p>
+                    <div class="d-flex">
+                        <input type="email" class="form-control-luxury me-2" placeholder="Email Address">
+                        <button class="btn-gold px-4">Join</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-5 opacity-10">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                <p class="small text-muted mb-0">&copy; 2026 Luxe Bridal Consignment. All rights reserved.</p>
+                <div class="d-flex gap-4">
+                    <a href="#" class="small text-muted">Privacy Policy</a>
+                    <a href="#" class="small text-muted">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

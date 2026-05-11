@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUXE BRIDAL | Premium Bridal & Formal Consignment</title>
+    <meta name="description"
+        content="Discover luxury bridal and formal wear at Luxe Bridal. Premium designer consignment gowns for the modern bride.">
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-theme="light">
+
+    <!-- Header -->
+    <nav class="navbar-luxury">
+        <div class="container-custom d-flex justify-content-between align-items-center">
+            <a href="index.html" class="brand-logo">
+                <img src="images/logo.png" alt="Luxe Bridal Logo" class="logo-img me-2">
+                Luxe Bridal
+            </a>
+
+            <div class="nav-links-desktop d-none d-lg-block">
+                <a href="index.html" class="nav-link-custom">Home</a>
+                <a href="home2.html" class="nav-link-custom">Home 2</a>
+                <a href="collections.html" class="nav-link-custom">Collections</a>
+                <a href="consignment.html" class="nav-link-custom">Consignment</a>
+                <a href="about.html" class="nav-link-custom">About</a>
+                <a href="contact.html" class="nav-link-custom">Contact</a>
+            </div>
+
+            <div class="header-actions d-flex align-items-center">
+                <button id="theme-toggle" class="btn border-0 p-2 me-2" aria-label="Toggle Theme">
+                    <i class="bi bi-moon"></i>
+                </button>
+                <button id="rtl-toggle" class="btn border-0 p-2 me-2" aria-label="Toggle RTL">
+                    <i class="bi bi-text-paragraph"></i>
+                </button>
+                <a href="login.html" class="nav-link-custom d-none d-md-block me-3"><i class="bi bi-person"></i></a>
+                <a href="#" class="nav-link-custom me-3"><i class="bi bi-heart"></i></a>
+                <button id="hamburger-menu" class="btn border-0 p-0 d-lg-none" aria-label="Open Menu">
+                    <i class="bi bi-list fs-3"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar Menu (Mobile & Expanded) -->
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
+    <div id="sidebar-menu" class="sidebar-menu">
+        <div id="sidebar-close" class="sidebar-close"><i class="bi bi-x-lg"></i></div>
+        <nav class="d-flex flex-column gap-4">
+            <a href="index.html" class="fs-4 luxury-heading">Home</a>
+            <a href="home2.html" class="fs-4 luxury-heading">Home 2</a>
+            <a href="collections.html" class="fs-4 luxury-heading">Collections</a>
+            <a href="consignment.html" class="fs-4 luxury-heading">Consignment</a>
+            <a href="about.html" class="fs-4 luxury-heading">Our Story</a>
+            <a href="contact.html" class="fs-4 luxury-heading">Contact</a>
+            <hr class="my-3 opacity-25">
+            <a href="login.html" class="fs-5">Login / Sign Up</a>
+        </nav>
+        <div class="mt-auto">
+            <p class="small opacity-50 mb-3">Luxe Bridal Consignment</p>
+            <div class="d-flex gap-3">
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-pinterest"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero" style="background-image: url('images/hero_bridal.png');">
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+            <span class="text-white text-uppercase letter-spacing-2 mb-3 d-block" style="letter-spacing: 4px;">Couture
+                Consignment</span>
+            <h1 class="text-white">Luxury Bridal Redefined.</h1>
+            <p class="text-white opacity-75 mb-5 mx-auto" style="max-width: 600px;">Experience the elegance of designer
+                bridal gowns and formal wear, curated for the modern, conscious bride.</p>
+            <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
+                <a href="collections.html" class="btn-gold">Explore Collections</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Featured Collections -->
+    <section class="py-5 bg-ivory">
+        <div class="container-custom py-5">
+            <div class="text-center mb-5">
+                <h2 class="display-5 mb-3">Our Collections</h2>
+                <div class="accent-line mx-auto" style="width: 50px; height: 2px; background: var(--accent-gold);">
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="product-card">
+                        <img src="images/collection_bridal.png" alt="Bridal Collection">
+                        <div class="product-info">
+                            <h3>Bridal Gowns</h3>
+                            <p class="text-muted">Timeless elegance from world-renowned designers.</p>
+                            <a href="collections.html?category=bridal"
+                                class="text-gold text-uppercase letter-spacing-1 small">View Collection</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="product-card">
+                        <img src="images/collection_formal.png" alt="Formal Wear Collection">
+                        <div class="product-info">
+                            <h3>Formal & Evening</h3>
+                            <p class="text-muted">Luxury gowns for galas, proms, and special occasions.</p>
+                            <a href="collections.html?category=formal"
+                                class="text-gold text-uppercase letter-spacing-1 small">View Collection</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-5">
+        <div class="container-custom py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <h2 class="display-5 mb-4">The Luxe Experience</h2>
+                    <p class="mb-4">At Luxe Bridal, we believe every bride deserves a premium experience without the
+                        premium price tag. Our consignment process is meticulously curated to ensure only the highest
+                        quality designer pieces enter our boutique.</p>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <i class="bi bi-patch-check text-gold fs-2 mb-2"></i>
+                            <h4 class="h5">Authenticated Quality</h4>
+                            <p class="small text-muted">Every gown is inspected for authenticity and pristine condition.
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <i class="bi bi-calendar-event text-gold fs-2 mb-2"></i>
+                            <h4 class="h5">Private Try-Ons</h4>
+                            <p class="small text-muted">Luxury appointment slots for a personal and intimate experience.
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <i class="bi bi-truck text-gold fs-2 mb-2"></i>
+                            <h4 class="h5">Local Pickup</h4>
+                            <p class="small text-muted">Convenient local pickup for online purchases.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <i class="bi bi-gem text-gold fs-2 mb-2"></i>
+                            <h4 class="h5">Designer Gowns</h4>
+                            <p class="small text-muted">Curated selection from Vera Wang, Pronovias, and more.</p>
+                        </div>
+                    </div>
+                    <a href="about.html" class="btn-gold mt-5">Discover More</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="position-relative">
+                        <img src="images/consignment_process.png" alt="Boutique Experience"
+                            class="img-fluid luxury-shadow">
+                        <div class="position-absolute bottom-0 end-0 bg-white p-4 d-none d-md-block m-4 luxury-shadow"
+                            style="background: var(--card-bg) !important;">
+                            <p class="luxury-heading mb-0 fs-4">"Elegant bridal wear, ethically sourced."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Section 1: Atelier Vision -->
+    <section class="py-5 bg-ivory">
+        <div class="container-custom py-5">
+            <div class="row align-items-center g-5 flex-row-reverse">
+                <div class="col-lg-6">
+                    <span class="text-gold text-uppercase letter-spacing-2 small mb-3 d-block">The Atelier Vision</span>
+                    <h2 class="display-5 luxury-heading mb-4">Crafting Your Unforgettable Moment</h2>
+                    <p class="mb-4">Beyond the gowns, we provide a sophisticated sanctuary for the modern bride. Every
+                        stitch in our curated collection tells a story of elegance, ensuring that your second-hand
+                        couture feels like it was whispered just for you.</p>
+                    <p class="text-muted mb-5">Our master curators hand-pick every silhouette, from timeless A-lines to
+                        avant-garde mermaid cuts, bridging the gap between historical luxury and contemporary
+                        sustainability.</p>
+                    <a href="about.html" class="btn-outline">Our Philosophy</a>
+                </div>
+                <div class="col-lg-6">
+                    <img src="images/hero_bridal.png" alt="Atelier Vision" class="img-fluid luxury-shadow"
+                        style="filter: grayscale(10%);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Section 2: Sustainable Couture -->
+    <section class="py-5">
+        <div class="container-custom py-5">
+            <div class="text-center mb-5">
+                <h2 class="display-5 luxury-heading">Sustainable Sophistication</h2>
+                <p class="text-muted">Redefining the life cycle of luxury fashion.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="p-5 border-color text-center h-100 luxury-shadow">
+                        <i class="bi bi-infinity fs-1 text-gold mb-4"></i>
+                        <h4 class="h5 luxury-heading">Infinite Style</h4>
+                        <p class="small text-muted mb-0">Bridal wear that transcends a single day. We ensure every gown
+                            finds a new home where it can shine once more.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-5 border-color text-center h-100 luxury-shadow">
+                        <i class="bi bi-flower1 fs-1 text-gold mb-4"></i>
+                        <h4 class="h5 luxury-heading">Ethically Curated</h4>
+                        <p class="small text-muted mb-0">Reducing the carbon footprint of the bridal industry without
+                            compromising on couture quality or designer labels.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-5 border-color text-center h-100 luxury-shadow">
+                        <i class="bi bi-gem fs-1 text-gold mb-4"></i>
+                        <h4 class="h5 luxury-heading">Authentic Luxury</h4>
+                        <p class="small text-muted mb-0">Every piece is authenticated and restored by experts, offering
+                            the Vera Wang experience with a conscious heart.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Section 3: Modern Stories -->
+    <section class="py-5 bg-secondary-subtle" style="background: var(--secondary-bg) !important;">
+        <div class="container-custom py-5">
+            <h2 class="display-5 luxury-heading text-center mb-5">Luxe Bride Stories</h2>
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <div class="h-100 p-0 overflow-hidden luxury-shadow position-relative" style="min-height: 400px;">
+                        <img src="images/consignment_process.png" alt="Happy Bride"
+                            class="img-fluid w-100 h-100 object-fit-cover shadow-lg">
+                        <div class="position-absolute bottom-0 start-0 p-5 w-100"
+                            style="background: linear-gradient(transparent, rgba(0,0,0,0.85));">
+                            <p class="text-white mb-2 fs-4 luxury-heading">"I found my dream Galia Lahav for a fraction
+                                of the price. The experience at Luxe was just as magical as a high-end salon."</p>
+                            <span class="text-gold text-uppercase small">— Elena R., September 2025</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="d-flex flex-column gap-4 h-100">
+                        <div class="p-4 bg-white luxury-shadow" style="background: var(--card-bg) !important;">
+                            <p class="small italic mb-3">"Sustainable, smart, and stunning. Why buy new when you can buy
+                                better?"</p>
+                            <span class="text-gold small text-uppercase">— Sarah J.</span>
+                        </div>
+                        <div class="p-4 bg-white luxury-shadow" style="background: var(--card-bg) !important;">
+                            <p class="small italic mb-3">"The consignment process was so professional. I'm happy my
+                                dress is making someone else smile."</p>
+                            <span class="text-gold small text-uppercase">— Michelle W.</span>
+                        </div>
+                        <div class="p-5 bg-white luxury-shadow flex-grow-1 d-flex align-items-center justify-content-center text-center"
+                            style="background: var(--card-bg) !important;">
+                            <a href="contact.html" class="btn-gold px-4">Share Your Story</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container-custom">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a href="index.html" class="brand-logo mb-4">
+                        <img src="images/logo.png" alt="Luxe Bridal Logo" class="logo-img me-2">
+                        Luxe Bridal
+                    </a>
+                    <p class="text-muted pe-lg-5">A premium consignment boutique offering the finest bridal and formal
+                        wear. Experience couture elegance at an accessible price point.</p>
+                    <div class="d-flex mt-4">
+                        <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <h5 class="luxury-heading mb-4">Collections</h5>
+                    <a href="collections.html" class="footer-link">Bridal Gowns</a>
+                    <a href="collections.html" class="footer-link">Evening Gowns</a>
+                    <a href="collections.html" class="footer-link">Prom Dresses</a>
+                    <a href="collections.html" class="footer-link">New Arrivals</a>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <h5 class="luxury-heading mb-4">Quick Links</h5>
+                    <a href="consignment.html" class="footer-link">Consign with Us</a>
+                    <a href="about.html" class="footer-link">Our Story</a>
+                    <a href="contact.html" class="footer-link">Location</a>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <h5 class="luxury-heading mb-4">Newsletter</h5>
+                    <p class="small text-muted mb-4">Subscribe to receive updates on new designer arrivals.</p>
+                    <div class="d-flex">
+                        <input type="email" class="form-control-luxury me-2" placeholder="Email Address">
+                        <button class="btn-gold px-4">Join</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-5 opacity-10">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                <p class="small text-muted mb-0">&copy; 2026 Luxe Bridal Consignment. All rights reserved.</p>
+                <div class="d-flex gap-4">
+                    <a href="#" class="small text-muted">Privacy Policy</a>
+                    <a href="#" class="small text-muted">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
