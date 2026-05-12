@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | LUXE BRIDAL</title>
-    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
@@ -13,7 +13,11 @@
         body.contact-page .contact-info-stack {
             display: flex;
             flex-direction: column;
-            gap: 2rem;
+            gap: 2.5rem;
+        }
+
+        body.contact-page .contact-info-block {
+            padding: 0.25rem 0;
         }
 
         body.contact-page .contact-info-block h4 {
@@ -26,7 +30,11 @@
         body.contact-page .contact-section-logo {
             width: 22px;
             height: 22px;
-            object-fit: contain;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            color: var(--accent-gold);
             flex-shrink: 0;
         }
 
@@ -38,7 +46,10 @@
         body.contact-page .contact-form-shell .form-select.form-control-luxury {
             background: transparent;
             color: var(--text-main) !important;
-            border-bottom: 1px solid rgba(201, 164, 106, 0.45);
+            border: 1px solid rgba(201, 164, 106, 0.55);
+            border-radius: 4px;
+            padding: 0.95rem 1rem;
+            box-shadow: none;
         }
 
         body.contact-page .contact-form-shell .form-control-luxury::placeholder {
@@ -48,7 +59,8 @@
 
         body.contact-page .contact-form-shell .form-control-luxury:focus,
         body.contact-page .contact-form-shell .form-select.form-control-luxury:focus {
-            border-bottom-color: var(--accent-gold);
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 0 2px rgba(201, 164, 106, 0.2);
         }
 
         body.contact-page .contact-form-shell .form-select.form-control-luxury {
@@ -57,7 +69,14 @@
 
         body.contact-page[data-theme="dark"] .contact-form-shell .form-control-luxury,
         body.contact-page[data-theme="dark"] .contact-form-shell .form-select.form-control-luxury {
-            border-bottom-color: rgba(212, 175, 114, 0.55);
+            border-color: rgba(212, 175, 114, 0.7);
+            box-shadow: none;
+        }
+
+        body.contact-page[data-theme="dark"] .contact-form-shell .form-control-luxury:focus,
+        body.contact-page[data-theme="dark"] .contact-form-shell .form-select.form-control-luxury:focus {
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 0 2px rgba(212, 175, 114, 0.3);
         }
 
         body.contact-page[data-theme="dark"] .contact-form-shell .form-select.form-control-luxury option {
@@ -73,8 +92,7 @@
     <nav class="navbar-luxury">
         <div class="container-custom d-flex justify-content-between align-items-center">
             <a href="index.html" class="brand-logo">
-                <img src="images/logo.png" alt="Luxe Bridal Logo" class="logo-img me-2">
-                Luxe Bridal
+                <svg xmlns="http://www.w3.org/2000/svg" height="38" viewBox="0 0 180 38" fill="none" aria-label="Luxe Bridal Logo" style="display:inline-block;vertical-align:middle;"><g transform="translate(2,2)"><polygon points="17,0 26,10 17,28 8,10" fill="none" stroke="#C9A96E" stroke-width="1.8"/><polygon points="17,7 22,12 17,22 12,12" fill="#C9A96E" opacity="0.7"/><line x1="8" y1="10" x2="26" y2="10" stroke="#C9A96E" stroke-width="1.2"/></g><text x="40" y="26" font-family="Georgia,serif" font-size="18" font-weight="700" letter-spacing="2" fill="currentColor">LUXE</text><text x="101" y="26" font-family="Georgia,serif" font-size="15" font-weight="400" letter-spacing="1.5" fill="#C9A96E">BRIDAL</text></svg>
             </a>
 
             <div class="nav-links-desktop d-none d-lg-block">
@@ -93,7 +111,7 @@
                 <button id="rtl-toggle" class="btn border-0 p-2 me-2" aria-label="Toggle RTL">
                     <i class="bi bi-text-paragraph"></i>
                 </button>
-                <a href="login.html" class="nav-link-custom d-none d-md-block me-3"><i class="bi bi-person"></i></a>
+                <a href="login.html" class="nav-login-btn d-none d-xl-inline-flex me-3">Login</a>
                 <a href="#" class="nav-link-custom me-3"><i class="bi bi-heart"></i></a>
                 <button id="hamburger-menu" class="btn border-0 p-0 d-lg-none" aria-label="Open Menu">
                     <i class="bi bi-list fs-3"></i>
@@ -114,7 +132,7 @@
             <a href="about.html" class="fs-4 luxury-heading">Our Story</a>
             <a href="contact.html" class="fs-4 luxury-heading">Contact</a>
             <hr class="my-3 opacity-25">
-            <a href="login.html" class="fs-5">Login</a>
+            <a href="login.html" class="nav-login-btn mt-2 align-self-start">Login</a>
         </nav>
     </div>
 
@@ -141,14 +159,14 @@
                     <div class="contact-info-stack">
                         <div class="contact-info-block">
                             <h4 class="h6 text-uppercase letter-spacing-1 mb-2">
-                                <img src="images/logo.png" alt="" class="contact-section-logo">Company Location
+                                <i class="bi bi-geo-alt contact-section-logo"></i>Company Location
                             </h4>
                             <p class="text-muted mb-0">123 Elegance Blvd, Suite 100<br>Paris Fashion District, FR 75001</p>
                         </div>
 
                         <div class="contact-info-block">
                             <h4 class="h6 text-uppercase letter-spacing-1 mb-2">
-                                <img src="images/logo.png" alt="" class="contact-section-logo">Contact Details
+                                <i class="bi bi-telephone contact-section-logo"></i>Contact Details
                             </h4>
                             <p class="text-muted mb-0">General: hello@luxebridal.com<br>Consignment:
                                 consign@luxebridal.com<br>Phone: (555) 123-4567</p>
@@ -156,14 +174,14 @@
 
                         <div class="contact-info-block">
                             <h4 class="h6 text-uppercase letter-spacing-1 mb-2">
-                                <img src="images/logo.png" alt="" class="contact-section-logo">Boutique Hours
+                                <i class="bi bi-clock contact-section-logo"></i>Boutique Hours
                             </h4>
                             <p class="text-muted mb-0">Mon - Sat: 10:00 AM - 6:00 PM<br>Sunday: By Appointment Only</p>
                         </div>
 
                         <div class="contact-info-block contact-social-block">
                             <h4 class="h6 text-uppercase letter-spacing-1 mb-2">
-                                <img src="images/logo.png" alt="" class="contact-section-logo">Social Media
+                                <i class="bi bi-share contact-section-logo"></i>Social Media
                             </h4>
                             <div class="d-flex gap-4">
                                 <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
@@ -272,9 +290,8 @@
             <div class="row g-5">
                 <div class="col-lg-4">
                     <a href="index.html" class="brand-logo mb-4">
-                        <img src="images/logo.png" alt="Luxe Bridal Logo" class="logo-img me-2">
-                        Luxe Bridal
-                    </a>
+                <svg xmlns="http://www.w3.org/2000/svg" height="38" viewBox="0 0 180 38" fill="none" aria-label="Luxe Bridal Logo" style="display:inline-block;vertical-align:middle;"><g transform="translate(2,2)"><polygon points="17,0 26,10 17,28 8,10" fill="none" stroke="#C9A96E" stroke-width="1.8"/><polygon points="17,7 22,12 17,22 12,12" fill="#C9A96E" opacity="0.7"/><line x1="8" y1="10" x2="26" y2="10" stroke="#C9A96E" stroke-width="1.2"/></g><text x="40" y="26" font-family="Georgia,serif" font-size="18" font-weight="700" letter-spacing="2" fill="currentColor">LUXE</text><text x="101" y="26" font-family="Georgia,serif" font-size="15" font-weight="400" letter-spacing="1.5" fill="#C9A96E">BRIDAL</text></svg>
+            </a>
                     <p class="text-muted pe-lg-5">A premium consignment boutique offering the finest bridal and formal
                         wear. Experience couture elegance at an accessible price point.</p>
                     <div class="d-flex mt-4">
@@ -321,3 +338,4 @@
 </body>
 
 </html>
+

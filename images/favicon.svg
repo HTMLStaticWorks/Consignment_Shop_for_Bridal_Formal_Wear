@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="32" fill="#1a1208"/>
+  <!-- Outer diamond outline -->
+  <polygon points="32,6 52,22 32,58 12,22" fill="none" stroke="#C9A96E" stroke-width="2.5"/>
+  <!-- Inner diamond fill -->
+  <polygon points="32,16 44,24 32,46 20,24" fill="#C9A96E" opacity="0.85"/>
+  <!-- Horizontal cut line -->
+  <line x1="12" y1="22" x2="52" y2="22" stroke="#C9A96E" stroke-width="2"/>
+  <!-- Top facet left -->
+  <line x1="32" y1="6" x2="20" y2="22" stroke="#C9A96E" stroke-width="1.5" opacity="0.6"/>
+  <!-- Top facet right -->
+  <line x1="32" y1="6" x2="44" y2="22" stroke="#C9A96E" stroke-width="1.5" opacity="0.6"/>
+</svg>

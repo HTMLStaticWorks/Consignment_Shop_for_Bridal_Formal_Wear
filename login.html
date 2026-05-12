@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | LUXE BRIDAL</title>
-    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
@@ -28,8 +28,7 @@
     <main class="auth-container luxury-shadow">
         <div class="text-center mb-4">
             <a href="index.html" class="brand-logo justify-content-center mb-3">
-                <img src="images/logo.png" alt="Luxe Bridal Logo" class="logo-img me-2" style="height: 40px;">
-                Luxe Bridal
+                <svg xmlns="http://www.w3.org/2000/svg" height="38" viewBox="0 0 180 38" fill="none" aria-label="Luxe Bridal Logo" style="display:inline-block;vertical-align:middle;"><g transform="translate(2,2)"><polygon points="17,0 26,10 17,28 8,10" fill="none" stroke="#C9A96E" stroke-width="1.8"/><polygon points="17,7 22,12 17,22 12,12" fill="#C9A96E" opacity="0.7"/><line x1="8" y1="10" x2="26" y2="10" stroke="#C9A96E" stroke-width="1.2"/></g><text x="40" y="26" font-family="Georgia,serif" font-size="18" font-weight="700" letter-spacing="2" fill="currentColor">LUXE</text><text x="101" y="26" font-family="Georgia,serif" font-size="15" font-weight="400" letter-spacing="1.5" fill="#C9A96E">BRIDAL</text></svg>
             </a>
             <h1 class="luxury-heading h3 mb-2">Welcome Back</h1>
             <p class="text-muted small">Sign in to your Luxe account</p>
@@ -41,15 +40,19 @@
                 <input type="email" class="form-control-luxury w-100" required>
             </div>
             <div class="mb-4">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                    <label class="small text-uppercase letter-spacing-1 mb-0">Password</label>
-                    <a href="#" class="small text-gold">Forgot Password</a>
-                </div>
+                <label class="small text-uppercase letter-spacing-1 mb-2">Password</label>
                 <div class="position-relative">
                     <input type="password" class="form-control-luxury w-100" id="password" required>
                     <button type="button" class="password-toggle-btn" data-target="password">
                         <i class="bi bi-eye"></i>
                     </button>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                    <div class="form-check mb-0">
+                        <input class="form-check-input" type="checkbox" id="rememberMe">
+                        <label class="form-check-label small text-muted" for="rememberMe">Remember me</label>
+                    </div>
+                    <a href="#" class="small text-gold">Forgot Password</a>
                 </div>
             </div>
 
@@ -86,3 +89,4 @@
 </body>
 
 </html>
+
