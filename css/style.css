@@ -123,6 +123,15 @@ a {
     align-items: center;
 }
 
+/* Keep navbar logo fully visible during nearby button interactions */
+.navbar-luxury .brand-logo,
+.navbar-luxury .brand-logo:hover,
+.navbar-luxury .brand-logo:focus,
+.navbar-luxury .brand-logo:active,
+.navbar-luxury .brand-logo svg {
+    opacity: 1 !important;
+}
+
 .logo-img {
     height: 40px;
     width: auto;
@@ -207,6 +216,13 @@ a {
 }
 
 .navbar-luxury #theme-toggle:focus,
+.navbar-luxury #theme-toggle:focus-visible,
+.navbar-luxury #theme-toggle:active {
+    box-shadow: none;
+    background: var(--accent-gold);
+    color: var(--btn-text);
+}
+
 .navbar-luxury #rtl-toggle:focus {
     box-shadow: none;
     color: var(--accent-gold);
