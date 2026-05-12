@@ -157,6 +157,14 @@ a {
     width: 100%;
 }
 
+.nav-link-custom.active {
+    color: var(--accent-gold);
+}
+
+.nav-link-custom.active::after {
+    width: 100%;
+}
+
 /* Sidebar Menu */
 .sidebar-overlay {
     position: fixed;
@@ -422,6 +430,13 @@ body {
     color: #fff;
 }
 
+.hero-full-image {
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-color: #111;
+}
+
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -513,7 +528,54 @@ footer {
     }
 
     .nav-links-desktop {
-        display: none;
+        display: none !important;
+    }
+
+    #hamburger-menu {
+        display: inline-flex !important;
+    }
+}
+
+/* Home2: Platinum Vault tablet alignment fixes */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .platinum-vault-section .row.align-items-end {
+        row-gap: 1rem;
+    }
+
+    .platinum-vault-section .text-lg-end {
+        text-align: left !important;
+    }
+
+    .platinum-vault-section .platinum-vault-grid .col-md-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        display: flex;
+    }
+
+    .platinum-vault-section .platinum-vault-grid .col-md-4:last-child {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .platinum-vault-section .vault-card {
+        width: 100%;
+        min-height: 100%;
+        padding: 2rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .platinum-vault-section .vault-card .text-muted {
+        margin-bottom: 1.5rem !important;
+    }
+
+    .platinum-vault-section .vault-card .btn-outline {
+        margin-top: auto;
+        min-width: 130px;
+        display: inline-flex;
+        justify-content: center;
     }
 }
 
@@ -528,6 +590,77 @@ footer {
 
     .sidebar-menu {
         width: 100%;
+    }
+
+    .navbar-luxury .brand-logo {
+        white-space: nowrap;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+
+    .navbar-luxury .logo-img {
+        height: 34px;
+    }
+
+    footer .col-md-4.col-lg-4>.d-flex {
+        gap: 0.75rem;
+        align-items: flex-end;
+    }
+
+    footer .col-md-4.col-lg-4>.d-flex .form-control-luxury {
+        flex: 1 1 auto;
+        min-width: 0;
+        margin-right: 0 !important;
+        margin-bottom: 0;
+    }
+
+    footer .col-md-4.col-lg-4>.d-flex .btn-gold {
+        flex: 0 0 auto;
+        white-space: nowrap;
+        padding: 0.95rem 1rem;
+        letter-spacing: 1px;
+    }
+
+    .consignment-process-section {
+        padding-bottom: 2rem !important;
+    }
+
+    .consignment-process-section .row {
+        --bs-gutter-y: 1.5rem;
+    }
+
+    .consignment-process-section .ready-consign-card {
+        padding: 1.75rem !important;
+    }
+
+    .consignment-faq-section {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+
+    .consignment-faq-section .container-custom {
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
+    }
+
+    .consignment-faq-section h2 {
+        margin-bottom: 2rem !important;
+    }
+
+    .about-founders-section h2 {
+        white-space: nowrap;
+        font-size: 2.25rem;
+    }
+
+    .about-founders-section .founders-list {
+        width: 100%;
+        gap: 1rem !important;
+        justify-content: space-between;
+    }
+
+    .about-founders-section .founder-item {
+        flex: 1 1 0;
+        align-items: flex-start !important;
     }
 }
 
@@ -553,6 +686,18 @@ footer {
     border: 1px solid var(--border-color);
 }
 
+.auth-control-btn {
+    border: 1px solid var(--accent-gold) !important;
+    background: var(--card-bg);
+    color: var(--text-main);
+    line-height: 1;
+}
+
+.auth-control-btn:hover {
+    color: var(--accent-gold);
+    border-color: var(--accent-gold) !important;
+}
+
 .form-control-luxury {
     background: transparent;
     border: none;
@@ -567,6 +712,24 @@ footer {
     box-shadow: none;
     border-bottom-color: var(--accent-gold);
     background: transparent;
+}
+
+[data-theme="dark"] .auth-container .form-control-luxury {
+    border-bottom-color: rgba(212, 175, 114, 0.45);
+}
+
+[data-theme="dark"] .auth-container .form-control-luxury::placeholder {
+    color: var(--text-muted);
+    opacity: 0.8;
+}
+
+.auth-container .form-check-input {
+    border-color: var(--accent-gold);
+    background-color: transparent;
+}
+
+[data-theme="dark"] .auth-container .form-check-input {
+    border-color: rgba(212, 175, 114, 0.6);
 }
 
 /* Collections Page */
@@ -695,4 +858,46 @@ footer {
     color: var(--accent-gold);
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(201, 164, 106, 0.1);
+}
+
+/* Back To Top */
+.back-to-top-btn {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--accent-gold);
+    background: var(--card-bg);
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1100;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: var(--transition-smooth);
+}
+
+.back-to-top-btn.visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.back-to-top-btn:hover {
+    color: var(--accent-gold);
+    transform: translateY(-2px);
+}
+
+[data-theme="dark"] #faqAccordion .accordion-button {
+    color: var(--text-main);
+}
+
+[data-theme="dark"] #faqAccordion .accordion-button:not(.collapsed) {
+    color: var(--text-main);
+    background-color: transparent;
+    box-shadow: none;
 }
